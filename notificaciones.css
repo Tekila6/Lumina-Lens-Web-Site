@@ -1,0 +1,174 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(img/imgfondo1.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 40px;
+    color: #bf0c1d;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    margin-inline: 300px;
+    text-align: center;
+    border-bottom: 1px solid #444;
+    border-radius:  20px 20px ;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.notificaciones {
+    display: flex;
+    flex-direction: column;
+}
+
+.anuncio {
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-sizing: border-box; /* Considera el borde y el relleno en el ancho */
+    border-radius: 0 20px 20px 0; /* Ajusta los bordes del recuadro */
+    text-align: center; /* Centra el texto dentro del recuadro */
+}
+
+.anuncio h2,
+.anuncio p {
+    text-align: center; /* Centra el contenido dentro del recuadro */
+}
+
+.contenido {
+    border: 5px solid #fff;
+    border-radius: 20px; /* Ajusta los bordes del video */
+    text-align: center; /* Centra tanto el texto como el video horizontalmente */
+    margin-inline: 110px;
+    padding-inline: 20px;
+    box-sizing: border-box; /* Incluye el borde y el relleno en el ancho total */
+}
+
+.contenido h2,
+.contenido p {
+    text-align: center; /* Centra el contenido dentro del recuadro */
+}
+
+.fecha {
+    font-size: 20px;
+    opacity: 0.7;
+}
+
+.post-container {
+    text-align: center;
+    border: 5px solid #fff;
+    border-radius: 20px; /* Ajusta los bordes del recuadro */
+    margin: 0 auto; /* Centra horizontalmente */
+    box-sizing: border-box; /* Considera el borde y el relleno en el ancho */
+    align-self: flex-end; /* Alinea el recuadro a la derecha */
+}
+
+iframe {
+    border: none;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto; /* Centra horizontalmente el video dentro del recuadro */
+}
+
+.anuncio-titulo {
+    font-size: 24px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid #bf0c1d; /* Borde rojo */
+    border-radius: 10px;
+    padding: 5px 10px;
+    width: fit-content;
+    position: absolute;
+    top: calc(50% - 20px); /* Ajusta la posición vertical */
+}
+
+.anuncio-titulo.izquierda {
+    left: 20px; /* Ajusta la posición horizontal */
+    top: calc(5% + 100px); /* Ajusta la posición vertical encima del primer título */
+    z-index: 2; /* Asegura que el título esté por encima de los otros elementos */
+    text-align: center; /* Centra el texto horizontalmente */
+    width: calc(50% - 50px); /* Ajusta el ancho para centrar el texto en el espacio de la derecha */
+}
+
+.anuncio-titulo.derecha {
+    right: 20px; /* Ajusta la posición horizontal */
+    top: calc(5% + 100px); /* Ajusta la posición vertical encima del primer título */
+    z-index: 2; /* Asegura que el título esté por encima de los otros elementos */
+    text-align: center; /* Centra el texto horizontalmente */
+    width: calc(50% - 50px); /* Ajusta el ancho para centrar el texto en el espacio de la derecha */
+    position: absolute; /* Coloca el título de manera absoluta */
+}
+
+.seccion-lumina {
+    float: left;
+    width: 50%; /* Ocupa la mitad del ancho de la página */
+    padding-right: 10px;
+    box-sizing: border-box;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column; /* Alinea el contenido en una columna */
+    align-items: center; /* Centra horizontalmente el contenido */
+}
+
+.seccion-photography {
+    float: right;
+    width: 50%; /* Ocupa la mitad del ancho de la página */
+    padding-left: 10px;
+    box-sizing: border-box;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column; /* Alinea el contenido en una columna */
+    align-items: center; /* Centra horizontalmente el contenido */
+}
+
+.anuncio.seccion-photography {
+    width: calc(50% - 30px); /* Ajusta el ancho de los anuncios de Photography */
+}
+
+
+.contenido img {
+    display: block;
+    margin: 0 auto; /* Centra horizontalmente la imagen */
+    max-width: 100%; /* Ajusta la imagen al ancho máximo del contenedor */
+    height: auto; /* Ajusta automáticamente la altura según el ancho */ 
+}
+
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s ease;
+    border: 2px solid #fff; /* Borde blanco de 2px */
+    border-radius: 20px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno */
+    margin: 20px auto; /* Espacio alrededor y centrado horizontal */
+    margin-inline: 60px;
+    margin-top: 0px;
+    top: 60px;
+    position: absolute;
+}
+
+ul li a:hover {
+    color: #bf0c1d; /* Nuevo rojo */
+    border-color: #bf0c1d; /* Nuevo rojo */
+}

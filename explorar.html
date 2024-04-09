@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Explorar Videos</title>
+<link rel="stylesheet" type="text/css" href="explorar.css">
+</head>
+<body>
+
+<div id="header">
+  <h1>Explorar</h1>
+  <div id="search">
+    <input type="text" id="searchInput" placeholder="Buscar videos..." oninput="searchVideos()">
+  </div>
+</div>
+
+              <ul>
+                <li><a href="index1.html">Volver</a></li>
+              </ul>
+
+<div id="categories">
+  <a href="#" onclick="filterVideos('photography')">Fotografía</a>
+  <a href="#" onclick="filterVideos('music')">Música</a>
+  <a href="#" onclick="filterVideos('travel')">Viajes</a>
+  <a href="#" onclick="filterVideos('weddings')">Bodas</a>
+  <a href="#" onclick="filterVideos('videos')">Videos</a>
+  <!-- Agrega más categorías según sea necesario -->
+</div>
+
+<div id="videos">
+  <div class="video photography">
+    <h2>Photography</h2>
+    <p>Categoría: Fotografía</p>
+    <iframe src="https://www.youtube.com/embed/Y2LcBrY-j7M?si=9i9A9N_deYXdMf7e" allowfullscreen></iframe>
+  </div>
+  <div class="video music">
+    <h2>The Last Of Us Fingerstyle</h2>
+    <p>Categoría: Música</p>
+    <iframe src="https://www.youtube.com/embed/BOUpNtk5Spk?si=kBteOT7D4GMDR-0o" allowfullscreen></iframe>
+  </div>
+  <div class="video travel weddings">
+    <h2>Filmación de Boda</h2>
+    <p>Categoría: Viajes, Bodas,</p>
+    <iframe src="https://www.youtube.com/embed/uUlwUw6qgXA?si=MeLbz9SbltFRxkur"  allowfullscreen></iframe>
+  </div>
+  <div class="video photography weddings videos">
+    <h2>Pro-Tips de como filmar Bodas</h2>
+    <p>Categoría: Fotografía, Bodas, Videos</p>
+    <iframe src="https://www.youtube.com/embed/ttxa6lmmfY0?si=p0xjn3JyAJvjo9i_"allowfullscreen></iframe>
+  </div>
+  <div class="video photography travel videos">
+    <h2>Cómo hacer un VIDEO DE VIAJE</h2>
+    <p>Categoría: Fotografía, Bodas, Videos</p>
+    <iframe src="https://www.youtube.com/embed/OP_hXHbVYBc?si=PRV0TJtdJ-oe9Cyi"allowfullscreen></iframe>
+  </div>
+  <div class="video music">
+    <h2>Poison</h2>
+    <p>Categoría: Música, Hh, Vivziepop</p>
+   <iframe src="https://www.youtube.com/embed/WLjr9NY4V34?si=-Qn6ey2U9olDOV4W" allowfullscreen></iframe>
+  </div>
+  <!-- Puedes añadir más vídeos aquí -->
+</div>
+
+<script>
+function searchVideos() {
+  var input = removeAccents(document.getElementById("searchInput").value.trim().toLowerCase());
+  var videos = document.getElementsByClassName("video");
+  
+  for (var i = 0; i < videos.length; i++) {
+    var title = removeAccents(videos[i].getElementsByTagName("h2")[0].innerText.toLowerCase());
+    var category = removeAccents(videos[i].getElementsByTagName("p")[0].innerText.toLowerCase());
+    var classes = videos[i].classList;
+    
+    if (title.includes(input) || category.includes(input) || classes.contains(input)) {
+      videos[i].style.display = "";
+    } else {
+      videos[i].style.display = "none";
+    }
+  }
+}
+
+function filterVideos(category) {
+  var videos = document.getElementsByClassName("video");
+  
+  for (var i = 0; i < videos.length; i++) {
+    if (videos[i].classList.contains(category)) {
+      videos[i].style.display = "";
+    } else {
+      videos[i].style.display = "none";
+    }
+  }
+}
+
+// Función para eliminar acentos de una cadena
+function removeAccents(str) {
+  return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+</script>
+
+</body>
+</html>

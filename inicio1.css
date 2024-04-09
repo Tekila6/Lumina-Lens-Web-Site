@@ -1,0 +1,85 @@
+body {
+    background-image: url(img/imgfondo1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Cambia la fuente predeterminada del cuerpo del documento a Arial */
+}
+
+#welcome-text h1,
+#welcome-text p {
+    font-family: Arial, sans-serif; /* Cambia la fuente del título y del texto de bienvenida a Arial */
+    margin-right: 0px;
+}
+
+
+#logo-container {
+    margin-top: 0px; /* Ajusta este valor según tu preferencia */
+}
+
+#logo-container img {
+    width: 400px; /* Ajusta el ancho de la imagen según sea necesario */
+    height: auto; /* Mantén la altura automática para mantener la proporción */
+    margin-top: 65px;
+    margin-bottom: 65px;
+}
+
+/* Estilos para la presentación bonita */
+#content {
+    text-align: center;
+}
+
+#welcome-text {
+    margin-top: 0px;
+}
+
+#welcome-text h1 {
+    font-size: 3em;
+    color: #bf0c1d; /* Cambia el color del texto según tus preferencias */
+    margin-top: 0px;
+}
+
+#welcome-text p {
+    font-size: 2em;
+    color: white; /* Cambia el color del texto según tus preferencias */
+    margin-inline: 200px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 30px;
+    transition: color 0.3s ease;
+    border: 2px solid #fff; /* Borde blanco de 2px */
+    border-radius: 20px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno */
+    margin: 20px auto; /* Espacio alrededor y centrado horizontal */
+    display: block; /* Mostrar como bloque */
+    margin-inline: 200px;
+}
+
+ul li a:hover {
+    color: #bf0c1d; /* Nuevo rojo */
+    border-color: #bf0c1d; /* Nuevo rojo */
+}

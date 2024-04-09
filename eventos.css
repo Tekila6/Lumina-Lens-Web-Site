@@ -1,0 +1,378 @@
+/* Estilos CSS generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(img/fondo2.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    color: #fff;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s ease;
+    border: 2px solid #fff; /* Borde blanco de 2px */
+    border-radius: 20px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno */
+    margin: 20px auto; /* Espacio alrededor y centrado horizontal */
+    margin-inline: 60px;
+    margin-top: 0px;
+    top: 60px;
+    position: absolute;
+}
+
+ul li a:hover {
+    color: #bf0c1d; /* Nuevo rojo */
+    border-color: #bf0c1d; /* Nuevo rojo */
+}
+
+.logo-sidebar {
+    width: 200px; /* Ajusta el tamaño del logo en la barra lateral */
+    margin-top: 50px; /* Ajusta este valor para mover el logo hacia abajo */
+    margin-left: 1600px; /* Centrar el logo horizontalmente */
+    margin-right: auto;
+    position: fixed;
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    color: #bf0c1d; /* Nuevo rojo */
+    display: block;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+    margin-top: 45px;
+    margin-bottom: 45px;
+}
+
+h2{
+    border: 2px solid #fff; /* Borde blanco de 2px */
+    border-radius: 20px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 20px; /* Tamaño de fuente */
+    margin: 0px auto; /* Espacio alrededor y centrado horizontal */
+    display: block; /* Mostrar como bloque */
+    margin-left: 60px;
+    margin-right: 300px;
+    text-align: left;
+}
+nav {
+    border: white;
+    padding: 10px;
+    text-align: center;;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #bf0c1d; /* Nuevo rojo */
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 150px;
+    gap: 20px; /* Espacio entre elementos */
+    padding: 20px;
+    grid-gap: 10px;
+    grid-auto-flow: dense; /* Rellenar automáticamente los espacios vacíos */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Plomo oscuro */
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item:nth-child(1) {
+    grid-row-start:span 1;
+}
+
+.gallery-item:nth-child(2) {
+    grid-row-start:span 1;
+}
+
+.gallery-item:nth-child(3) {
+    grid-row-start:span 1;
+}
+.gallery-item:nth-child(4) {
+    grid-row-start:span 4;
+}
+
+.gallery-item:nth-child(5) {
+    grid-row-start:span 2;
+}
+
+.gallery-item:nth-child(8) {
+    grid-row-start:span 3;
+}
+
+.gallery-item:nth-child(9) {
+    grid-row-start:span 3;
+}
+
+.gallery-item:nth-child(10) {
+    grid-row-start:span 2;
+}
+
+.gallery-item:nth-child(12) {
+    grid-row-start:span 3;
+}
+
+.gallery-item:nth-child(17) {
+    grid-row-start:span 2;
+}
+
+.gallery-item:nth-child(19) {
+    grid-row-start:span 2;
+}
+
+.gallery-item:nth-child(20) {
+    grid-row-start:span 2;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999; /* Asegura que el modal esté por encima de todo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal:target {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+    position: relative;
+    text-align: center;
+    overflow: auto;
+    background-color: #111; /* Color de fondo del modal */
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.close {
+    position: absolute;
+    top: 15px; /* Ajusta la distancia desde la parte superior */
+    right: 15px; /* Ajusta la distancia desde la parte derecha */
+    color: #fff; /* Cambia el color a blanco */
+    font-size: 30px;
+    transition: color 0.3s ease;
+    z-index: 100; /* Asegura que esté sobre el contenido del modal */
+}
+
+.close a {
+    color: #fff; /* Cambia el color a blanco */
+    text-decoration: none;
+}
+
+.close a:hover {
+    color: #bf0c1d; /* Nuevo rojo */
+}
+
+footer {
+    background-color: #090909; /* Ajusta el tono oscuro para los derechos reservados */
+    padding: 20px;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid #444;
+    z-index: 999; /* Asegura que los derechos reservados estén sobre la barra lateral */
+}
+
+.footer-text {
+    color: #fff;
+    margin: auto; /* Centra el texto horizontal y verticalmente */
+    max-width: 33%; /* Cambiado el ancho máximo */
+    align-items: center; /* Centra verticalmente el contenido */
+}
+
+/* Estilos para la sección de imágenes de usuario */
+.user-images {
+    padding: 20px;
+    background-color: #111; /* Color de fondo para la sección */
+    margin-top: 20px; /* Espacio superior */
+    display: none; /* Por defecto, ocultar la sección */
+}
+
+/* Estilos para la sección de desafíos */
+.challenges {
+    margin-top: 40px; /* Espacio entre la galería y la sección de desafíos */
+}
+
+.challenge {
+    border: 2px solid #bf0c1d; /* Borde rojo */
+    border-radius: 30px;
+    margin-bottom: 20px; /* Espacio entre desafíos */
+    margin-inline: 20px;
+    padding: 10px;
+    cursor: pointer; /* Cambiar el cursor al hacer clic */
+}
+
+.challenge h2 {
+    margin: 0;
+    color: #bf0c1d; /* Color del texto rojo */
+}
+
+.challenge-images {
+    margin-top: 10px; /* Espacio entre el título del desafío y las imágenes */
+    display: none; /* Por defecto, ocultar las imágenes */
+}
+
+/* Estilos adicionales para las imágenes dentro de las secciones de desafíos */
+.challenge-images .gallery-item {
+    height: 150px;
+    margin-bottom: 10px;
+    display: inline-block;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 150px;
+    gap: 20px; /* Espacio entre elementos */
+    padding: 20px;
+    grid-gap: 10px;
+    grid-auto-flow: dense; /* Rellenar automáticamente los espacios vacíos */
+}
+
+.challenge-images .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta el tamaño de la imagen */
+    border-radius: 8px; /* Borde redondeado */
+    box-shadow: none; /* Sin sombra */
+}
+
+/* Estilos para el botón de cierre */
+.close {
+    position: absolute;
+    top: 15px; /* Ajusta la distancia desde la parte superior */
+    right: 15px; /* Ajusta la distancia desde la parte derecha */
+    color: #fff; /* Color del icono de cierre */
+    font-size: 30px;
+    z-index: 100; /* Asegura que esté sobre el contenido del modal */
+}
+
+.close:hover {
+    color: #bf0c1d; /* Cambia el color al pasar el ratón */
+}
+
+/* Añadir una transición suave para las imágenes */
+.modal-content img {
+    transition: transform 0.3s ease-in-out;
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: auto;
+}
+
+.gallery-container {
+    position: relative;
+    margin-bottom: 30px; /* Espacio entre la galería y el botón "Más" */
+}
+
+#mostrarMas {
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    border: 2px solid #fff; /* Borde blanco de 2px */
+    border-radius: 20px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 20px; /* Tamaño de fuente */
+    margin: 20px auto; /* Espacio alrededor y centrado horizontal */
+    display: block; /* Mostrar como bloque */
+}
+
+#mostrarMenos {
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    border: 2px solid #fff; /* Borde blanco de 2px */
+    border-radius: 20px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 20px; /* Tamaño de fuente */
+    margin: 20px auto; /* Espacio alrededor y centrado horizontal */
+    display: block; /* Mostrar como bloque */
+}
+
+.submenu {
+    position: relative;
+}
+
+.submenu-items {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border-color: #bf0c1d;
+    background-color: #000;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.submenu-items li {
+    list-style-type: none;
+    margin: 5px 0;
+}
+
+.submenu-items a {
+    color: #fff; /* Color del texto */
+}
+
+.submenu:hover .submenu-items {
+    display: block;
+}
+
+.submenu-items a:hover {
+    color: white; /* Color del texto al acercar el cursor */
+}
+
+
